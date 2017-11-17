@@ -1,0 +1,51 @@
+.mainBoard {
+    position: relative;
+    width: 450px;
+    height: 450px;
+    margin: 0 auto;
+    -webkit-box-shadow: -2px -2px 2px #EFEFEF, 5px 5px 5px #B9B9B9;
+    -moz-box-shadow: -2px -2px 2px #EFEFEF, 5px 5px 5px #B9B9B9;
+    box-shadow: -2px -2px 2px #EFEFEF, 5px 5px 5px #B9B9B9;
+}
+
+.mainBoard .onePiece {
+    display: block;
+    position: absolute;
+    width: 26px;
+    height: 26px;
+    border-radius: 50%;
+    color: red;
+    text-align: center;
+    line-height: 26px;
+    font-size: 16px;
+    font-family: "Microsoft JhengHei";
+    text-decoration: none;
+    font-style: normal;
+}
+.mainBoard i.hidden {
+    font-size: 0;
+}
+
+.mainBoard .black {
+    background-image: -webkit-radial-gradient(circle at 15px 11px, #636766, #0A0A0A);
+    background-image: radial-gradient(circle at 15px 11px, #636766, #0A0A0A);
+}
+.mainBoard .white {
+    background-image: -webkit-radial-gradient(circle at 15px 11px, #FFFFFF, #A1A1A1);
+    background-image: radial-gradient(circle at 15px 11px, #FFFFFF, #A1A1A1);
+}
+
+.buttons {
+    width: 450px;
+    height: 50px;
+    margin: auto;
+    display: flex;
+    display: -webkit-flex; /* Safari */
+    justify-content: space-around;
+    align-items: center;
+}
+.button {
+    min-width: 50px;
+    min-height: 30px;
+    /*background-color: #B9B9B9;*/
+}

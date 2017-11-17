@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>五子棋</title>
+    <link rel="stylesheet" type="text/css" href="css/gobang.css">
+</head>
+<body>
+    <div class="buttons">
+        <button class="button" onclick="single()" id="single" disabled="disabled">单人</button>
+        <button class="button" onclick="oneonone()" id="oneonone">双人</button>
+    </div>
+    <div class="mainBoard" id="mainBoard">
+        <canvas id="gobang" width="450px" height="450px"></canvas>
+    </div>
+    <div class="buttons">
+        <button class="button" onclick="restart()">重开</button>
+        <button class="button" onclick="showLabel()" id="showLabel">显示/隐藏序号</button>
+        <button class="button" onclick="withdraw()">悔棋</button>
+        <button class="button" onclick="giveUp()" disabled="disabled">投降</button>
+    </div>
+
+    <script type="text/javascript" src="js/gobang.js"></script>
+</body>
+</html>
