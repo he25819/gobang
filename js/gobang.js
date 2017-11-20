@@ -37,9 +37,9 @@ var isShowLabel = false;
         resetElements();
     };
     withdraw = function() {
-        if (!confirm("是否悔棋")) {
-            return;
-        }
+        //if (!confirm("是否悔棋")) {
+        //    return;
+        //}
         if (gameMode == 1 && nextPieceNum > 2) {
             withdrawByStep(2);
         } else if (gameMode == 2 && nextPieceNum > 1) {
@@ -199,6 +199,9 @@ var isShowLabel = false;
     };
 
     var computerOneStep = function() {
+        if (isOver) {
+            return;
+        }
         var blackScore = [];
         var whiteScore = [];
         var maxScore = 0;
@@ -261,7 +264,7 @@ var isShowLabel = false;
         } else if (humanWinMethodPiecesCount[k] == 3) {
             humanScore[i][j] += 200;
         } else if (humanWinMethodPiecesCount[k] == 4) {
-            humanScore[i][j] += 1000;
+            humanScore[i][j] += 2000;
         }
         if (computerWinMethodPiecesCount[k] == 1) {
             computerScore[i][j] += 22;
