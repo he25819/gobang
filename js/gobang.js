@@ -255,6 +255,7 @@ var isShowLabel = false;
         showScore(blackScore, whiteScore);
         var random = Math.floor(Math.random() * sameScoreCount);
         putDownOnePiece(u[random], v[random]);
+        //computerOneStep();
     };
     var caculateScore = function (i, j, k, humanWinMethodPiecesCount, computerWinMethodPiecesCount, humanScore, computerScore) {
         if (humanWinMethodPiecesCount[k] == 1) {
@@ -289,6 +290,10 @@ var isShowLabel = false;
         updateWinMethodPiecesCount(i, j, isBlack);
         checkWin(isBlack);
         nextPieceNum++;
+        if (nextPieceNum > 225 && isOver == false) {
+            isOver = true;
+            alert("a draw in chess");
+        }
     };
     var updateWinMethodPiecesCount = function(i, j, isBlack) {
         for (var k = 0; k < winMethodsCount; k++) {
